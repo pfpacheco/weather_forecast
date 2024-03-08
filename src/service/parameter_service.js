@@ -1,5 +1,6 @@
-const ParamsRepository = require("../repository/parameter.js");
-module.exports = class ParamsService {
+const ParamsRepository = require("../repository/parameter_repository.js");
+
+class ParameterService {
 
     async create(parameters) {
         let response = {};
@@ -20,3 +21,5 @@ module.exports = class ParamsService {
         return response;
     }
 }
+
+module.exports = ParameterService;

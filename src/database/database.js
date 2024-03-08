@@ -1,5 +1,6 @@
 import connection from "mongoose";
-module.exports = class Database {
+
+class Database {
     createConnection(mongodb_uri){
 
         const conn = connection.createConnection();
@@ -29,4 +30,6 @@ module.exports = class Database {
         }
     }
 }
+
+module.exports = Database;
 

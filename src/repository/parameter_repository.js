@@ -1,9 +1,7 @@
-import mongoose from "mongoose";
 import Database  from "../database/database.js"
-import ParameterSchema from "../database/schema/parameter.js"
+import ParameterSchema from "../models/parameter.js"
 
-
-module.exports = class ParamsRepository {
+class ParameterRepository {
 
     constructor() {
         this.mongodb_uri = process.env.MONGODB_URI;
@@ -46,4 +44,6 @@ module.exports = class ParamsRepository {
         }
     }
 }
+
+module.exports = ParameterRepository;
 

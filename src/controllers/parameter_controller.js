@@ -1,6 +1,6 @@
-import ParamsRepository from "../repository/parameter.js";
-import ParamsService from "../service/parameters.js";
-module.exports = class ParameterController {
+import ParamsRepository from "../repository/parameter_repository.js";
+import ParamsService from "../service/parameter_service.js";
+class ParameterController {
 
     async create(req, res){
 
@@ -19,3 +19,5 @@ module.exports = class ParameterController {
 
     }
 }
+
+module.exports = ParameterController;
