@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  mongodb:
+    container_name: "mongo_db"
+    image: "bitnami/mongodb:latest"
+    environment:
+      MONGODB_USERNAME: mongo
+      MONGODB_PASSWORD: p7oyGer21gfNix6LMgZr
+      MONGODB_ROOT_PASSWORD: p7oyGer21gfNix6LMgZr
+      MONGODB_DATABASE: weather_forecast
+    ports:
+      - "0.0.0.0:27017:27017"
+    volumes:
+      - ./mongodb/data:/mongodb/data
