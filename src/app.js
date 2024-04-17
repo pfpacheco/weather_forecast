@@ -1,19 +1,20 @@
-import cors from "cors";
+import Cors from "cors";
 import express, {json} from "express";
 import compression from "compression";
-import {router} from "express/lib/application";
 import {configDotenv} from "dotenv";
 import mongoose from "mongoose";
+import route from "./routes/route.js";
+
 
 configDotenv();
 
 const app = express();
 
 app.use(compression());
-app.use(cors());
+app.use(Cors());
 app.use(json());
 
-app.use(router);
+app.use(route);
 
 mongoose.connect(process.env.MONGODB_URI).then(() => {
     console.log(`Connected to MongoDB...`);
