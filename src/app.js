@@ -3,8 +3,7 @@ import express, {json} from "express";
 import compression from "compression";
 import {configDotenv} from "dotenv";
 import mongoose from "mongoose";
-import route from "./routes/route.js";
-
+import routes from "./routes/route.js";
 
 configDotenv();
 
@@ -14,7 +13,7 @@ app.use(compression());
 app.use(Cors());
 app.use(json());
 
-app.use(route);
+app.use(routes);
 
 mongoose.connect(process.env.MONGODB_URI).then(() => {
     console.log(`Connected to MongoDB...`);
