@@ -1,9 +1,8 @@
 import mongoose, {Schema} from "mongoose";
-import uuidv4 from "uuid";
 
 const location = new Schema({
-    uuid: {
-        type: uuidv4(),
+    _id: {
+        type: Schema.Types.ObjectId,
         primaryKey: true
     },
     coordinates: {
